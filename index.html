@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Кнопка.онлайн — НЕ НАЖИМАТЬ</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Верхние угловые элементы -->
+    <div class="version">версия 0.0.1 (бессмысленная)</div>
+    <div class="clock" id="clock">--:--:--</div>
+
+    <!-- Главная сцена -->
+    <div class="stage" id="stage">
+        <button class="button" id="button" type="button" aria-label="Не нажимать">НЕ НАЖИМАТЬ</button>
+
+        <div class="info" id="info">
+            <div class="counter">
+                Количество людей, которые её нажали:
+                <strong id="counterValue">0</strong>
+            </div>
+            <div class="hint">Нажми Enter, если смелый</div>
+        </div>
+
+        <!-- Текст-сообщение после нажатия -->
+        <div class="big-message" id="bigMessage"></div>
+    </div>
+
+    <!-- Финальный текст блокировки -->
+    <div class="block-message" id="blockMessage"></div>
+
+    <!-- Тост-уведомление -->
+    <div class="toast" id="toast"></div>
+
+    <!-- Лидерборд: переключатель и панель -->
+    <button class="leaderboard-toggle" id="leaderboardToggle" type="button">ЛИДЕРБОРД</button>
+    <aside class="leaderboard" id="leaderboard" aria-hidden="true">
+        <button class="leaderboard-close" id="leaderboardClose" type="button" aria-label="Закрыть">✕</button>
+        <h2>Самые нетерпеливые</h2>
+        <div class="subtitle">Топ-5 тех, кто не выдержал</div>
+        <ol id="leaderboardList"></ol>
+    </aside>
+
+    <script src="script.js"></script>
+</body>
+</html>
